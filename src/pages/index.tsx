@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main className="w-11/12 center m-auto text-black items-center justify-center">
-      <nav id="navbar" className="w-full  bg-white border border-gray-200 ">
+      <nav id="navbar" className="w-full  bg-white border border-gray-200">
         <div className="flex flex-row items-center justify-between ">
           <div className="flex flex-row items-center justify-start">
             <div className="w-20">
@@ -18,10 +18,9 @@ export default function Home() {
             <div className="text-lg text-black font-semibold">Shelter</div>
           </div>
           <div className="flex flex-row justify-between space-x-4">
-            <div className="text-black">Home</div>
+            <div className="text-black">About Us</div>
             <div className="text-black">About Us</div>
             <div className="text-black">Collection</div>
-            <div className="text-black">Gallery</div>
           </div>
 
           <div className="flex flex-row justify-between items-center space-x-4">
@@ -164,7 +163,7 @@ export default function Home() {
           className="relative w-[100%] flex flex-col item-center justify-start"
         >
           <h1 className="text-black font-bold text-[70px] m-auto">
-            Our Collection
+            Fancy word for collection
           </h1>
           <div className=" flex justify-evenly m-10 h-70vh flex-wrap">
             <PetBox />
@@ -184,11 +183,8 @@ export default function Home() {
             <div className="text-lg text-white font-semibold">Shelter</div>
           </div>
 
-          <div className="flex space-x-6 justify-between items-center">
-            <div className="text-white">Home</div>
-            <div className="text-white">About Us</div>
-            <div className="text-white">Collection</div>
-            <div className="text-white">Gallery</div>
+          <div className="text-white text-md flex space-x-6 justify-between items-center">
+            ©deflated pappadam
           </div>
           <div className="buttons flex space-x-5 justify-between items-center">
             <button className="p-4 border rounded-[100%] border-grey-200">
