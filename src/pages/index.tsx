@@ -2,14 +2,14 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import PetBox from "@/components/PetBox";
 import PopButton from "@/components/PopButton";
-import dog from "../assets/dog.png"
+import dog from "../assets/dog.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="">
-      <nav id="navbar" className="w-full bg-white border border-gray-200 ">
+    <main className="w-11/12 center m-auto text-black items-center justify-center">
+      <nav id="navbar" className="w-full  bg-white border border-gray-200 ">
         <div className="flex flex-row items-center justify-between ">
           <div className="flex flex-row items-center justify-start">
             <div className="w-20">
@@ -25,48 +25,147 @@ export default function Home() {
           </div>
 
           <div className="flex flex-row justify-between items-center space-x-4">
-            <PopButton text="Contribute" bgcolor="bg-red-500" textColor="text-white" shadow="rgb(0,0,0)" />
+            <PopButton
+              text="Contribute"
+              bgcolor="bg-red-500"
+              textColor="text-white"
+              shadow="rgb(0,0,0)"
+            />
           </div>
         </div>
       </nav>
 
-      <div className="border-2 border-black min-h-[100vh] relative ">
-
-        <div id="home" className=" text-black border-b-[5px] border-black  min-h-[60vh] flex justify-between pl-12">
+      <div className="flex flex-col border-2 rounded-xl border-black min-h-[100vh] relative ">
+        <div
+          id="home"
+          className="flex text-black  border-b-[2px] border-black max-w-[2000px] min-h-[60vh]  justify-between pl-12"
+        >
           <div className="max-w-[60%] flex flex-col  justify-center">
-            <h1 className="mb-5 text-7xl font-bold">Rhon put some catchphrase here</h1>
-            <p className="text-lg m-4 text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, consequuntur pariatur ut quisquam, recusandae cupiditate consectetur molestias quia atque veritatis impedit qui hic explicabo ex debitis porro sint. Repellendus, quibusdam?</p>
-            <PopButton text="Contribute" bgcolor="bg-red-500" textColor="text-white" shadow="rgb(0,0,0)" />
+            <h1 className="flex mb-5 text-7xl font-bold">
+              Rhon put some catchphrase here
+            </h1>
+            <p className="text-lg m-4 text-gray-600">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Sapiente, consequuntur pariatur ut quisquam, recusandae cupiditate
+              consectetur molestias quia atque veritatis impedit qui hic
+              explicabo ex debitis porro sint. Repellendus, quibusdam?
+            </p>
+            <PopButton
+              text="Contribute"
+              bgcolor="bg-red-500"
+              textColor="text-white"
+              shadow="rgb(0,0,0)"
+            />
           </div>
-          <div className="w-[70%] flex justify-end">
-            <div className=' bg-white flex flex-col border-2 border-black m-10  w-[350px] h-[400px] rounded-xl hover:shadow-[10px_10px_0px_rgb(0,0,0)] hover:translate-x-[-10px] hover:translate-y-[-10px] transition-all'>
+
+          <div className="w-[70%] item-center flex justify-end">
+            <div className="  bg-white flex flex-col border-2 border-black m-10  shadow-red-500 w-9/13  rounded-2xl shadow-[10px_10px_0px_rgb(0,0,0)]  translate-x-[-15px]  translate-y-[-15px] transition-all">
               <div className=" rounded-t-lg img w-[100%] h-[80%] bg-black">
-                <Image src={dog} alt="" className="h-[100%] rounded-t-xl "/>
+                <Image src={dog} alt="" className="h-[100%] rounded-t-xl " />
               </div>
-              <div className=' flex justify-between items-center m-5'>
+              <div className=" flex justify-between items-center m-5">
                 <div className="flex justify-center flex-col mt-1 gap-1">
-                  <h1 className='text-black text-3xl font-bold'>Name</h1>
+                  <h1 className="text-black text-3xl font-bold">
+                    Ritin D George
+                  </h1>
                 </div>
-                <h1 className=' text-red-500 text-3xl font-bold'> rarity</h1>
+                <h1 className=" text-red-500 text-3xl font-bold"> Basic </h1>
               </div>
             </div>
           </div>
         </div>
 
-        <div id="aboutUs" className="flex min-h-[100vh] border-b-[5px] border-black">
-          <div>
-
-          </div>
+        <div
+          id="aboutUs"
+          className="flex min-h-[100vh] border-b-[2px] border-black"
+        >
+          <div></div>
           <div className="w-[50%] m-10 flex flex-col justify-center">
             <h1 className="mb-10 text-6xl font-bold text-black">About us</h1>
-            <p className="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit illum saepe, commodi molestiae rerum deleniti architecto aspernatur reiciendis vero accusamus, debitis quam assumenda consectetur eos deserunt delectus amet soluta earum!
-            Blanditiis nisi, aliquam aut quas placeat pariatur maiores repellendus quasi reiciendis ipsum sint fuga officiis magni quaerat numquam distinctio. Eum dolorum atque, ad autem esse dolorem corporis fuga veniam illo!
-            Voluptate, cumque voluptatem. Officia mollitia velit qui adipisci, temporibus eius facere accusamus, rem amet perspiciatis quisquam? Possimus debitis harum aperiam, optio omnis temporibus dolorem inventore sequi amet obcaecati cumque voluptas.</p>
+            <p className="text-black">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+              illum saepe, commodi molestiae rerum deleniti architecto
+              aspernatur reiciendis vero accusamus, debitis quam assumenda
+              consectetur eos deserunt delectus amet soluta earum! Blanditiis
+              nisi, aliquam aut quas placeat pariatur maiores repellendus quasi
+              reiciendis ipsum sint fuga officiis magni quaerat numquam
+              distinctio. Eum dolorum atque, ad autem esse dolorem corporis fuga
+              veniam illo! Voluptate, cumque voluptatem. Officia mollitia velit
+              qui adipisci, temporibus eius facere accusamus, rem amet
+              perspiciatis quisquam? Possimus debitis harum aperiam, optio omnis
+              temporibus dolorem inventore sequi amet obcaecati cumque voluptas.
+            </p>
           </div>
         </div>
 
-        <div id="collection" className="relative w-[100%] flex flex-col item-center justify-start">
-          <h1 className="text-black font-bold text-[70px] m-auto">Our Collection</h1>
+        <div
+          id="meet"
+          className="flex flex-col min-h-[70vh] border-b-[2px]  border-black items-center justify-center m-auto"
+        >
+          <div className="flex flex-col items-center justify-center">
+            <div className="flex  text-black text-6xl font-semibold text-center">
+              Meet your pet&lsquo;s needs so{" "}
+            </div>
+            <div className="flex  text-black text-6xl font-semibold text-center">
+              they live happily
+            </div>
+          </div>
+          <div className="mt-6 flex md:flex-row flex-col">
+            <div className="w-[330px] h-[180px] flex flex-col bg-white border-2 border-black m-10   rounded-lg shadow-black shadow-[6px_6px_0px_rgb(0,0,0)] -translate-y-1 -translate-x-1 transition-all" >
+              <div >
+                <div className="text-center text-black text-2xl font-semibold">
+                  random text ig
+                </div>
+                <div className="  p-4 text-slate-500-400 text-xl font-thin">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+              illum saepe, commodi molestiae rerum deleniti architecto
+           
+                </div>
+              </div>
+            </div>
+
+            <div className="w-[330px] h-[180px] flex flex-col bg-white border-2 border-black m-10   rounded-lg shadow-black shadow-[6px_6px_0px_rgb(0,0,0)] -translate-y-1 -translate-x-1 transition-all" >
+              <div >
+                <div className="text-center text-black text-2xl font-semibold">
+                  random text ig
+                </div>
+                <div className="  p-4 text-slate-500-400 text-xl font-thin">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+              illum saepe, commodi molestiae rerum deleniti architecto
+           
+                </div>
+              </div>
+            </div>
+
+            <div className="w-[330px] h-[180px] flex flex-col bg-white border-2 border-black m-10   rounded-lg shadow-black shadow-[6px_6px_0px_rgb(0,0,0)] -translate-y-1 -translate-x-1 transition-all" >
+              <div >
+                <div className="text-center text-black text-2xl font-semibold">
+                  random text ig
+                </div>
+                <div className="  p-4 text-slate-500-400 text-xl font-thin">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+              illum saepe, commodi molestiae rerum deleniti architecto
+           
+                </div>
+              </div>
+            </div>
+
+            
+
+          
+          
+
+
+          </div>
+        </div>
+
+        <div
+          id="collection"
+          className="relative w-[100%] flex flex-col item-center justify-start"
+        >
+          <h1 className="text-black font-bold text-[70px] m-auto">
+            Our Collection
+          </h1>
           <div className=" flex justify-evenly m-10 h-70vh flex-wrap">
             <PetBox />
             <PetBox />
