@@ -32,7 +32,7 @@ export default function Home() {
 
       <div className="border-2 border-black min-h-[100vh] relative ">
 
-        <div id="home" className=" text-black min-h-[500px] border-b-[5px] border-black  h-[60vh] flex justify-between pl-12">
+        <div id="home" className=" text-black border-b-[5px] border-black  min-h-[60vh] flex justify-between pl-12">
           <div className="max-w-[60%] flex flex-col  justify-center">
             <h1 className="mb-5 text-7xl font-bold">Rhon put some catchphrase here</h1>
             <p className="text-lg m-4 text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, consequuntur pariatur ut quisquam, recusandae cupiditate consectetur molestias quia atque veritatis impedit qui hic explicabo ex debitis porro sint. Repellendus, quibusdam?</p>
@@ -53,12 +53,15 @@ export default function Home() {
           </div>
         </div>
 
-        <div id="aboutUs" className="h-[100vh] border-b-[5px] border-black">
+        <div id="aboutUs" className="flex min-h-[100vh] border-b-[5px] border-black">
           <div>
 
           </div>
-          <div>
-            
+          <div className="w-[50%] m-10 flex flex-col justify-center">
+            <h1 className="mb-10 text-6xl font-bold text-black">About us</h1>
+            <p className="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit illum saepe, commodi molestiae rerum deleniti architecto aspernatur reiciendis vero accusamus, debitis quam assumenda consectetur eos deserunt delectus amet soluta earum!
+            Blanditiis nisi, aliquam aut quas placeat pariatur maiores repellendus quasi reiciendis ipsum sint fuga officiis magni quaerat numquam distinctio. Eum dolorum atque, ad autem esse dolorem corporis fuga veniam illo!
+            Voluptate, cumque voluptatem. Officia mollitia velit qui adipisci, temporibus eius facere accusamus, rem amet perspiciatis quisquam? Possimus debitis harum aperiam, optio omnis temporibus dolorem inventore sequi amet obcaecati cumque voluptas.</p>
           </div>
         </div>
 
