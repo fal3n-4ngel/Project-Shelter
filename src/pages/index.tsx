@@ -1,12 +1,15 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import PetBox from "@/components/PetBox";
+import PopButton from "@/components/PopButton";
+import dog from "../assets/dog.png"
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main className="">
-      <nav className="w-full bg-white border border-gray-200">
+      <nav id="navbar" className="w-full bg-white border border-gray-200 ">
         <div className="flex flex-row items-center justify-between ">
           <div className="flex flex-row items-center justify-start">
             <div className="w-20">
@@ -22,50 +25,52 @@ export default function Home() {
           </div>
 
           <div className="flex flex-row justify-between items-center space-x-4">
-            <button className="w-24 h-12 bg-red-500  px-3 border-[1px]  border-black rounded-md drop-shadow-[0px_0px_0px_rgb(0,0,0)] hover:shadow-none shadow-[6px_6px_0px_rgb(0,0,0)]  hover:translate-y-0 -translate-y-1 hover:translate-x-0 -translate-x-1 transition-all text-whitefont-semibold ">
-              Log In
-            </button>
+            <PopButton text="Contribute" bgcolor="bg-red-500" textColor="text-white" shadow="rgb(0,0,0)" />
           </div>
         </div>
       </nav>
 
-      <div className="border-2 border-black ">
-        <div className="flex flex-row justify-between">
-          <div className="justify-start">
-            <div className="text-6xl text-black font-medium">
-              Find <span className="err">cute and smart</span> pets to play with
-              you
-            </div>
-            <div className="text-2xl text-black font-light">
-              we provide food water  etc
-            </div>
+      <div className="border-2 border-black min-h-[100vh] relative ">
 
-            <div className="mt-6 mb-6 flex flex-row  space-x-6 items-center">
-              <button className="w-34 h-12 bg-red-500  px-3 border-[1px]  border-black rounded-md drop-shadow-[0px_0px_0px_rgb(0,0,0)] hover:shadow-none shadow-[6px_6px_0px_rgb(0,0,0)]  hover:translate-y-0 -translate-y-1 hover:translate-x-0 -translate-x-1 transition-all text-whitefont-semibold ">
-                Explore Now
-              </button>
-              <div className="text-md text-black font-medium items-center justify-center">
-                <div className="ml-5 text-orange-800"> 2.5k+</div> customers
-              </div>
-
-              <div className="text-md text-black font-medium items-center justify-center">
-                <div className="ml-6 text-orange-800"> 370+</div> collections
-              </div>
-              
-            </div>
+        <div id="home" className=" text-black min-h-[500px] border-b-[5px] border-black  h-[60vh] flex justify-between pl-12">
+          <div className="max-w-[60%] flex flex-col  justify-center">
+            <h1 className="mb-5 text-7xl font-bold">Rhon put some catchphrase here</h1>
+            <p className="text-lg m-4 text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, consequuntur pariatur ut quisquam, recusandae cupiditate consectetur molestias quia atque veritatis impedit qui hic explicabo ex debitis porro sint. Repellendus, quibusdam?</p>
+            <PopButton text="Contribute" bgcolor="bg-red-500" textColor="text-white" shadow="rgb(0,0,0)" />
           </div>
-
-          <div className="mt-10">
-            <img
-              className="w-[300px] border-[1px]  border-black rounded-md drop-shadow-[0px_0px_0px_rgb(0,0,0)] hover:shadow-none shadow-[12px_12px_0px_rgb(0,0,0)]  hover:-translate-y-2 -translate-y-4 hover:-translate-x-2 -translate-x-4 transition-all text-whitefont-semibold"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp3m58j9V50_AkoYWOk6otf0zO69kEpS9znQ&usqp=CAU"
-            ></img>
+          <div className="w-[70%] flex justify-end">
+            <div className=' bg-white flex flex-col border-2 border-black m-10  w-[350px] h-[400px] rounded-xl hover:shadow-[10px_10px_0px_rgb(0,0,0)] hover:translate-x-[-10px] hover:translate-y-[-10px] transition-all'>
+              <div className=" rounded-t-lg img w-[100%] h-[80%] bg-black">
+                <Image src={dog} alt="" className="h-[100%] rounded-t-xl "/>
+              </div>
+              <div className=' flex justify-between items-center m-5'>
+                <div className="flex justify-center flex-col mt-1 gap-1">
+                  <h1 className='text-black text-3xl font-bold'>Name</h1>
+                </div>
+                <h1 className=' text-red-500 text-3xl font-bold'> rarity</h1>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="collection w-[100%] h-[100vh] flex flex-col a">
+        <div id="aboutUs" className="h-[100vh] border-b-[5px] border-black">
+          <div>
+
+          </div>
+          <div>
+            
+          </div>
+        </div>
+
+        <div id="collection" className="relative w-[100%] flex flex-col item-center justify-start">
           <h1 className="text-black font-bold text-[70px] m-auto">Our Collection</h1>
-          <div className="h-70vh"></div>
+          <div className=" flex justify-evenly m-10 h-70vh flex-wrap">
+            <PetBox />
+            <PetBox />
+            <PetBox />
+            <PetBox />
+            <PetBox />
+          </div>
         </div>
 
         <div className="footer p-5 bg-red-500 w-50 flex justify-between">
