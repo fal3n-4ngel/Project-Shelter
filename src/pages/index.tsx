@@ -95,7 +95,6 @@ export default function Home() {
               <li data-te-nav-item-ref>
                 <a onClick={() => {
                     aboutUsRef?.current?.scrollIntoView({
-                      top: -100,
                       block: "start",
                       behavior: "smooth",
                     });
@@ -192,7 +191,7 @@ export default function Home() {
 
         <div
           id="aboutUs"
-          className="flex flex-row justify-between min-h-8/10 border-b-[2px] border-black"
+          className="flex flex-row justify-between min-h-8/10 border-b-[2px] border-black scroll-mt-12"
           ref={aboutUsRef}
         >
           <div>
@@ -277,7 +276,7 @@ export default function Home() {
 
         <div
           id="meet"
-          className="flex flex-col min-h-[70vh] border-b-[2px]  border-black items-center justify-center m-auto"
+          className="flex flex-col min-h-[70vh] border-b-[2px]  border-black items-center justify-center scroll-mt-5"
           ref={objectivePageRef}
         >
           <div className="flex flex-col items-center justify-center">
@@ -333,7 +332,7 @@ export default function Home() {
         <div
           id="collection"
           ref={collectionPageRef}
-          className="relative w-[100%] flex flex-col item-center justify-start"
+          className="relative w-[100%] flex flex-col item-center justify-start scroll-mt-11"
         >
           <h1 className="text-black font-bold text-[70px] m-auto">
             Fancy word for collection
