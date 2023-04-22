@@ -81,7 +81,7 @@ export default function Home() {
           </div>
           <div>
             <ul className="flex flex-row justify-between space-x-4 ">
-              <li data-te-nav-item-ref>
+              <li >
                 <a
                   className="text-black disabled:text-slate-100"
                   onClick={() => {
@@ -94,7 +94,7 @@ export default function Home() {
                   Home
                 </a>
               </li>
-              <li data-te-nav-item-ref>
+              <li >
                 <a onClick={() => {
                     aboutUsRef?.current?.scrollIntoView({
                       block: "start",
@@ -112,7 +112,8 @@ export default function Home() {
                       block: "start",
                       behavior: "smooth",
                     });
-                  }}>
+                  }}
+                  className="text-black disabled:text-slate-100">
                   Meet
                 </a>
               </li>
