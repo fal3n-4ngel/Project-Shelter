@@ -35,7 +35,6 @@ yarn-error.log*
 next-env.d.ts
 
 node_modules
-package-lock.json
 .env
 coverage
 coverage.json
