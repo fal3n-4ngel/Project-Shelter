@@ -5,22 +5,43 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "erc721a/contracts/ERC721A.sol";
 
 contract Stray is ERC721A, Ownable {
-    uint256 public maxSupply = 100;
+    uint256 public maxSupply;
     uint256 public tokenPrice = 1 gwei;
     string private _baseTokenURI;
 	address payable public withdrawWalletAddress;
 
-    constructor() ERC721A("Stray", "STRAY") {}
+    constructor(uint256 max_supply, string memory base_token_URI) ERC721A("Stray", "STRAY") {
+		maxSupply = max_supply;
+		_baseTokenURI = base_token_URI;
+	}
 
     function mint(uint256 quantity) external payable {
-		require(_totalMinted() + quantity <= maxSupply, 'Sold Out');
-		require(msg.value >= quantity * tokenPrice, 'Invalid Funds');
+		require(_totalMinted() + quantity <= maxSupply, 'Not enough supply left');
+		require(msg.value >= quantity * tokenPrice, 'Insufficent Funds');
         _mint(msg.sender, quantity);
     }
+
 
 	function withdraw() external onlyOwner {
 		(bool success, ) = withdrawWalletAddress.call{ value: address(this).balance }('');
 		require(success, 'withdraw failed');
+	}
+
+	function getMaxSupply() public view returns (uint256)  {
+		return maxSupply;
+	}
+
+	function getOwnerTokens(address owner) public view returns (uint[] memory) {
+		uint[] memory result = new uint[](balanceOf(owner));
+		uint count = 0;
+		for(uint i = 0; i < _totalMinted(); i++) {
+			if(ownerOf(i) == owner) {
+				result[count] = i;
+				count++;
+				if(count == balanceOf(owner)) break;
+			}
+		}
+		return result;
 	}
 
 	function setBaseURI(string calldata baseURI) external onlyOwner {
@@ -33,6 +54,10 @@ contract Stray is ERC721A, Ownable {
 
 	function setMaxSupply(uint256 supply) external onlyOwner {
 		maxSupply = supply;
+	}
+
+	function setWithdrawWalletAddress(address payable wallet) external onlyOwner {
+		withdrawWalletAddress = wallet;
 	}
 
 	// OVERRIDE FUNCTIONS

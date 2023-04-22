@@ -15,6 +15,7 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
+    "ethers": "^5.7.2",
     "next": "^13.3.0",
     "postcss": "8.4.22",
     "react": "^18.2.0",
@@ -30,7 +31,6 @@
     "chai": "^4.3.7",
     "erc721a": "^4.2.3",
     "ethereum-waffle": "^4.0.10",
-    "ethers": "^5.7.2",
     "hardhat": "^2.14.0"
   }
 }
