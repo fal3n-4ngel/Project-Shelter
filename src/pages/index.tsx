@@ -5,6 +5,12 @@ import PopButton from "@/components/PopButton";
 import Knowmore from "@/components/Knowmore";
 import dog from "../assets/dog.png";
 import logo from "../assets/logo.png";
+import logo1 from "../assets/logo.png";
+import logo2 from "../assets/logo.png";
+import logo3 from "../assets/logo.png";
+import p1 from  "../../public/nfts/65.png"
+import p2 from "../../public/nfts/83.png"
+import p3 from  "../../public/nfts/99.png"
 import Marquee from "react-fast-marquee";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
@@ -186,7 +192,7 @@ export default function Home() {
                     Ritin D George
                   </h1>
                 </div>
-                <h1 className=" text-red-500 text-3xl font-bold"> Basic </h1>
+                <h1 className=" text-red-500 text-3xl font-bold"> #00 </h1>
               </div>
             </div>
           </div>
@@ -203,27 +209,27 @@ export default function Home() {
                 <div className=" relative w-full">
 
                   <div className=" absolute w-40  top-[200px] left-20 shadow-red-500   shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all  ">
-                    <Image src={dog} alt="" />
+                    <Image src={p1} alt="" />
                   </div>
 
                   <div className=" absolute w-20  top-[50px] left-[120px]  rounded-xl ">
-                    <Image src={dog} alt="" />
+                    <Image src={logo1} alt="" />
                   </div>
                   
                   <div className="  absolute w-40  top-[20px] left-[250px] shadow-red-500  shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all">
-                  <Image src={dog} alt="" />
+                  <Image src={p2} alt="" />
                   </div>
                   
                   <div className=" absolute w-20  top-[50px] left-[450px]  rounded-xl ">
-                    <Image src={dog} alt="" />
+                    <Image src={logo2} alt="" />
                   </div>
 
                   <div className="  absolute w-40 top-[200px] left-[420px] shadow-red-500 shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all ">
-                  <Image src={dog} alt="" />
+                  <Image src={p3} alt="" />
                   </div>
 
                   <div className=" absolute w-20  top-[250px] left-[290px]  rounded-xl ">
-                    <Image src={dog} alt="" />
+                    <Image src={logo3} alt="" />
                   </div>
                   
                 </div>
@@ -341,11 +347,12 @@ export default function Home() {
             Fancy word for collection
           </h1>
           <div className=" flex justify-evenly m-auto w-[80rem] h-70vh flex-wrap">
-            <PetBox />
-            <PetBox />
-            <PetBox />
-            <PetBox />
-            <PetBox />
+            <PetBox name="Twinkle Toes" img="/nfts/4.png" rarity="#4"/>
+            <PetBox name="Lady Fluffington" img="/nfts/26.png" rarity="#26"/>
+            <PetBox name="Captain Kidd" img="/nfts/43.png" rarity="#43"/>
+            <PetBox name="Frankie Furrball" img="/nfts/45.png" rarity="#45"/>
+            <PetBox name="Baahdass" img="/nfts/83.png" rarity="#83"/>
+           
             <Knowmore />
           </div>
         </div>

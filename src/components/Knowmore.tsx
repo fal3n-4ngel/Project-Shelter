@@ -11,6 +11,7 @@ export default function Knowmore() {
             <Image
               src={dog}
               alt=""
+              width={300} height={300}
               className="h-[100%] group-hover:hidden  border-black border-b-2 rounded-t-xl "
             />
           </div>
