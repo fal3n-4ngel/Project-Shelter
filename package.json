@@ -24,13 +24,13 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
     "@nomiclabs/hardhat-ethers": "^2.2.3",
     "@nomiclabs/hardhat-waffle": "^2.0.5",
     "@openzeppelin/contracts": "^4.8.3",
     "chai": "^4.3.7",
     "erc721a": "^4.2.3",
-    "ethereum-waffle": "^2.2.0",
+    "ethereum-waffle": "^2.5.1",
     "ethers": "^5.7.2",
     "hardhat": "^2.14.0"
   }
