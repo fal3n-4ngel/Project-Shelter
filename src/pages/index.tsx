@@ -338,11 +338,7 @@ export default function Home() {
           <h1 className="text-black font-bold text-[70px] m-auto">
             Fancy word for collection
           </h1>
-          <div className=" flex justify-evenly m-10 h-70vh flex-wrap">
-            <PetBox />
-            <PetBox />
-            <PetBox />
-            <PetBox />
+          <div className=" flex justify-evenly m-auto w-[80rem] h-70vh flex-wrap">
             <PetBox />
             <PetBox />
             <PetBox />
