@@ -40,6 +40,7 @@ export default function Contribute() {
 			const contract = new ethers.Contract(contractAddress, Stray.abi, signer);
 			try {
 				const response = await contract.mint(BigNumber.from(90), {value: ethers.utils.parseEther((200).toString())});
+				await contract.wait();
 				console.log("response:", response);
 			} catch (err) {
 				console.log("error:", err);
