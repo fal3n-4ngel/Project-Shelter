@@ -25,7 +25,7 @@ export default function Contribute() {
 
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+  const contractAddress = "0xD48fF3bd74563C01F674206Df406AcBb135AB6a6";
 
   const onAmountChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = !Number.isNaN(e.target.valueAsNumber)
@@ -49,11 +49,16 @@ export default function Contribute() {
       const signer = provider?.getSigner();
       const contract = new ethers.Contract(contractAddress, Stray.abi, signer);
       try {
-        const response = await contract.mint(BigNumber.from(90), {
-          value: ethers.utils.parseEther((200).toString()),
+		let amt = 0
+		if (amount) amt = amount;
+		let len = amt.toString().length;
+		let cost = "0."+"0".repeat(10-len!)+ amt.toString();
+		console.log(cost);
+        const response = await contract.mint(BigNumber.from(Math.floor(amt/100)), {
+          value: ethers.utils.parseEther(cost),
         });
-        await contract.wait();
-        console.log("response:", response);
+		await response.wait()		
+        // console.log("response:", response);
       } catch (err) {
         console.log("error:", err);
       }
