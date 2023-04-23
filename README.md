@@ -5,6 +5,7 @@
  <h1 align="center">PROJECT SHELTER</h1>
 
  <h2 align="center">What is Project Shelter?</h1>
+ <p align="center">Our project aims at providing a donation gateway aimed at aiding strayed animals. Via our medium, both the benefactors and the reciepents get maximum benefit as the entire processes is multi-ended and self sustained. Project Shelters guarantee that the benefactors are given a choice to profit off the NFTs minted, as a token for good intent. We have teamed up with PFA (People For Animals). an NGO which aims at improving the existing scenario of stray animals. </p>
 
 ## Technologies Used
 [![My Skills](https://skillicons.dev/icons?i=nextjs,ts,react,ipfs,solidity,replit,tailwind,py,&theme=light)](https://github.com/fal3n-4ngel/)
