@@ -2,28 +2,23 @@
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "erc721a/contracts/ERC721A.sol";
 
-contract Stray is ERC721, Ownable {
+contract Stray is ERC721A, Ownable {
     uint256 public maxSupply;
     uint256 public tokenPrice = 1 gwei;
-	uint256 public totalMinted = 0;
     string private _baseTokenURI;
 	address payable public withdrawWalletAddress;
 
-    constructor(uint256 max_supply, string memory base_token_URI) ERC721("Stray", "STRAY") {
+    constructor(uint256 max_supply, string memory base_token_URI) ERC721A("Stray", "STRAY") {
 		maxSupply = max_supply;
 		_baseTokenURI = base_token_URI;
 	}
 
     function mint(uint256 quantity) external payable {
-		require(totalMinted + quantity <= maxSupply, 'Not enough supply left');
+		require(_totalMinted() + quantity <= maxSupply, 'Not enough supply left');
 		require(msg.value >= quantity * tokenPrice, 'Insufficent Funds');
-
-		for (uint256 i = 0; i < quantity; i++) {
-			totalMinted++;
-			_safeMint(msg.sender, totalMinted);
-		}
+        _mint(msg.sender, quantity);
     }
 
 
@@ -39,7 +34,7 @@ contract Stray is ERC721, Ownable {
 	function getOwnerTokens(address owner) public view returns (uint[] memory) {
 		uint[] memory result = new uint[](balanceOf(owner));
 		uint count = 0;
-		for(uint i = 0; i < totalMinted; i++) {
+		for(uint i = 0; i < _totalMinted(); i++) {
 			if(ownerOf(i) == owner) {
 				result[count] = i;
 				count++;
@@ -68,7 +63,7 @@ contract Stray is ERC721, Ownable {
 	// OVERRIDE FUNCTIONS
 	function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
 		require(_exists(tokenId), 'Token does not exist');
-		return string(abi.encodePacked(_baseTokenURI, Strings.toString(tokenId), ".json"));
+		return string(abi.encodePacked(_baseTokenURI, _toString(tokenId)));
 	}
 
     function _baseURI() internal view override returns (string memory) {

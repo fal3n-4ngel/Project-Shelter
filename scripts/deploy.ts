@@ -2,7 +2,7 @@ import { ethers } from "hardhat";
 
 async function main() {
 	const Stray = await ethers.getContractFactory("Stray");
-	const stray = await Stray.deploy(92, "ipfs://QmXMeP6Z3SnsXVxgfnTdoido6vtpPo89j2GtVGMGK8vUez/");
+	const stray = await Stray.deploy(92, "ipfs://QmSq15fGUNwYZs6X5pYMKM7SruMMsgiC6vAb5oFEmPm6A4/");
 
 	await stray.deployed();
 	console.log("Stray Deployed To:", stray.address);

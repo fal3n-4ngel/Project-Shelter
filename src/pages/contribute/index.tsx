@@ -27,7 +27,7 @@ export default function Contribute() {
 
     const inputRef = useRef<HTMLInputElement>(null);
 
-    const contractAddress = "0x88DbA5aC6eAD97c65800091251d46D2229B478AE";
+    const contractAddress = "0x9d8d5c9674d48e1d7E1D23bD06c47ee9459138a1";
 
     const onAmountChange = (e: ChangeEvent<HTMLInputElement>) => {
         const value = !Number.isNaN(e.target.valueAsNumber)
@@ -278,7 +278,7 @@ export default function Contribute() {
                                 send you {Math.floor(amount! / 100)} Stray NFTs
                                 as a thank you for your support.
                             </p>
-                            <p>You can view your NFTs at </p>
+                            <p>You can view your NFTs <a className="text-red-500 underline font-bold" href="https://testnets.opensea.io/collection/project-shelter">here</a></p>
                             <button
                                 onClick={() => setshowThankyouMsg(false)}
                                 className="p-1 px-4 mt-5 border-4 rounded-lg font-semibold text-red-500 border-red-500 hover:bg-red-500 hover:text-white"
