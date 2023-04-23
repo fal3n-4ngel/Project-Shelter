@@ -178,7 +178,7 @@ export default function Home() {
             ref={homeTextRef}
           >
             <h1 className="flex mb-5 text-7xl font-bold opacity-0">
-            Isn't it about time we repay our companions what they deserve?
+            Isn&lsquo;t it about time we repay our companions what they deserve?
             </h1>
             <p className="text-lg m-4 text-gray-600 opacity-0">
             Throughout history, every attempt to progress has been aimed at enhancing human life while neglecting the well-being of <b>flora and fauna</b>,
