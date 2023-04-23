@@ -63,7 +63,7 @@ contract Stray is ERC721A, Ownable {
 	// OVERRIDE FUNCTIONS
 	function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
 		require(_exists(tokenId), 'Token does not exist');
-		return string(abi.encodePacked(_baseTokenURI, _toString(tokenId), ".json"));
+		return string(abi.encodePacked(_baseTokenURI, _toString(tokenId)));
 	}
 
     function _baseURI() internal view override returns (string memory) {

@@ -20,7 +20,7 @@ folder = "./out/json"
 cnt = 0
 path = './out/test-json'
 for count, filename in enumerate(os.listdir(folder)):
-    dst = f"{str(cnt)}.json"
+    dst = f"{str(cnt)}"
     src =f"{folder}/{filename}"  # foldername/filename, if .py file is outside folder
     dst =f"./out/test-json/{dst}"
     os.rename(src, dst)

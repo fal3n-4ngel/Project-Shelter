@@ -17,22 +17,39 @@ export default function Footer() {
         ©deflated pappadam
       </div>
       <div className="buttons flex space-x-5 justify-between items-center">
+<<<<<<< HEAD
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
           <button className="p-4 border-2 rounded-[100%] border-grey-200 hover:scale-110 ">
             <Image src={inst} alt="" className="w-5 " />{" "}
           </button>
         </a>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+=======
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+          <button className="p-4 border-2 rounded-[100%] border-grey-200 hover:scale-110">
+            <Image src={inst} alt="" className="w-5 " />{" "}
+          </button>
+        </a>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+>>>>>>> d2160f279973313d0683f6cc49aab4f539393ff4
           <button className="p-4 border-2 rounded-[100%] border-grey-200 hover:scale-110">
             <Image src={git} alt="" className="w-5 " />{" "}
           </button>
         </a>
+<<<<<<< HEAD
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="blank">
+=======
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
+>>>>>>> d2160f279973313d0683f6cc49aab4f539393ff4
           <button className="p-4 border-2 rounded-[100%] border-grey-200 hover:scale-110">
             <Image src={twit} alt="" className="w-5 " />{" "}
           </button>
         </a>
       </div>
     </div>
+<<<<<<< HEAD
   );
+=======
+  )
+>>>>>>> d2160f279973313d0683f6cc49aab4f539393ff4
 }
