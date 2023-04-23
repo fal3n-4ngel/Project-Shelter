@@ -221,7 +221,7 @@ export default function Home() {
           ref={aboutUsRef}
         >
           <div>
-            <div className="w-11/12 flex flex-row ">
+            <div className="w-10/12 flex flex-row ">
               <div className=" relative w-full">
                 <div className=" absolute w-40  top-[200px] left-20 shadow-red-500   shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all  ">
                   <Image src={p1} alt="" />
@@ -248,7 +248,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="w-full m-10 flex flex-col justify-center">
+              <div className="w-10/12 ml-40 flex flex-col justify-end">
                 <h1 className="mb-10 text-6xl font-bold text-black">
                   About us
                 </h1>
