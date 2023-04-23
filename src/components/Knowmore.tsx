@@ -15,8 +15,8 @@ export default function Knowmore() {
               className="h-[100%] group-hover:hidden  border-black border-b-2 rounded-t-xl "
             />
           </div>
-          <div className="absolute hidden group-hover:block  text-black font-semibold text-4xl top-[150px] left-[60px] ease-in transition-all">
-            Know More
+          <div className="absolute hidden group-hover:block  text-black font-semibold text-4xl top-[150px] left-[50px] ease-in transition-all">
+            Explore more
           </div>
         </div>
       </div>
