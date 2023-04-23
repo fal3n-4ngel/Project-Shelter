@@ -282,21 +282,21 @@ export default function Home() {
           speed={40}
         >
           <h1>
-            itin George D <span className="px-4 ">•</span> Rhon S George{" "}
-            <span className="p-x-4 mx-4">•</span> Vinu B George{" "}
-            <span className="p-x-4 mx-4">•</span> Adithya T George{" "}
+            evelutionizing Fundraisers <span className="px-4 ">•</span> Web3 + Blockchain{" "}
+            <span className="p-x-4 mx-4">•</span> Self Sustained{" "}
+            <span className="p-x-4 mx-4">•</span> Multiended Donations{" "}
             <span className="p-x-4 mx-4">•</span> R
           </h1>
           <h1>
-            itin George D <span className="px-4 ">•</span> Rhon S George{" "}
-            <span className="p-x-4 mx-4">•</span> Vinu B George{" "}
-            <span className="p-x-4 mx-4">•</span> Adithya T George{" "}
+            evelutionizing Fundraisers <span className="px-4 ">•</span> Web3 + Blockchain{" "}
+            <span className="p-x-4 mx-4">•</span> Self Sustained{" "}
+            <span className="p-x-4 mx-4">•</span> Multiended Donations{" "}
             <span className="p-x-4 mx-4">•</span> R
           </h1>
           <h1>
-            itin George D <span className="px-4 ">•</span> Rhon S George{" "}
-            <span className="p-x-4 mx-4">•</span> Vinu B George{" "}
-            <span className="p-x-4 mx-4">•</span> Adithya T George{" "}
+            evelutionizing Fundraisers <span className="px-4 ">•</span> Web3 + Blockchain{" "}
+            <span className="p-x-4 mx-4">•</span> Self Sustained{" "}
+            <span className="p-x-4 mx-4">•</span> Multiended Donations{" "}
             <span className="p-x-4 mx-4">•</span> R
           </h1>
         </Marquee>
