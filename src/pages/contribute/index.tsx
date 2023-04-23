@@ -4,6 +4,13 @@ import PopButton from "@/components/PopButton";
 import React, { ChangeEvent, useEffect, useRef, useState } from "react";
 import Stray from "../../artifacts/contracts/Stray.sol/Stray.json";
 import logo from "../../assets/logo.png";
+import Footer from "@/components/Footer";
+import p1 from "../../../public/nfts/4.png";
+import p2 from "../../../public/nfts/65.png";
+import p3 from "../../../public/nfts/43.png";
+import logo1 from "../../assets/logo.png";
+import logo2 from "../../assets/logo.png";
+import logo3 from "../../assets/logo.png";
 
 export default function Contribute() {
   const [totalMinted, setTotalMinted] = useState(0);
@@ -45,7 +52,7 @@ export default function Contribute() {
         const response = await contract.mint(BigNumber.from(90), {
           value: ethers.utils.parseEther((200).toString()),
         });
-		await contract.wait();
+        await contract.wait();
         console.log("response:", response);
       } catch (err) {
         console.log("error:", err);
@@ -54,7 +61,7 @@ export default function Contribute() {
   };
 
   return (
-    <div>
+    <div className="w-11/12 m-auto overflow-hidden">
       <nav
         id="navbar"
         className=" sticky z-10 bg-white top-0 w-full   border-b-2 border-gray-600"
@@ -103,13 +110,70 @@ export default function Contribute() {
               </li>
             </ul>
           </div>
-
         </div>
       </nav>
 
-      <div className="h-screen w-full bg-slate-200">
-        <div className="h-screen  flex -m-[5rem] flex-col items-center justify-center">
-          <div className="bg-white text-black rounded-lg p-5">
+      <div className=" -mt-[10%] w-full border-black border-2 bg-slate-200 ">
+        <div className="h-screen  flex  flex-col items-center justify-center">
+          <div className=" ">
+            <div className=" justify-end items-end  w-[50%]">
+              <div className=" absolute w-40  top-[70%] left-[5%] shadow-red-500   shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all  ">
+                <Image src={p1} alt="" />
+              </div>
+
+              <div className=" absolute w-20  top-[55%] left-[5%]  rounded-xl ">
+                <Image src={logo1} alt="" />
+              </div>
+
+              <div className="  absolute w-40  top-[50%] left-[12%] shadow-red-500  shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all">
+                <Image src={p2} alt="" />
+              </div>
+
+              <div className=" absolute w-20  top-[55%] left-[25%] rounded-xl ">
+                <Image src={logo2} alt="" />
+              </div>
+
+              <div className="  absolute w-40 top-[70%] left-[20%] shadow-red-500 shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all ">
+                <Image src={p3} alt="" />
+              </div>
+
+              <div className=" absolute w-20  top-[75%] left-[15%]  rounded-xl ">
+                <Image src={logo3} alt="" />
+              </div>
+            </div>
+
+
+          </div>
+
+          <div>
+          <div className=" justify-end items-end  w-[50%]">
+              <div className=" absolute w-40  top-[30%] left-[70%] shadow-red-500   shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all  ">
+                <Image src={p1} alt="" />
+              </div>
+
+              <div className=" absolute w-20  top-[15%] left-[70%]  rounded-xl ">
+                <Image src={logo1} alt="" />
+              </div>
+
+              <div className="  absolute w-40  top-[10%] left-[77%] shadow-red-500  shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all">
+                <Image src={p2} alt="" />
+              </div>
+
+              <div className=" absolute w-20  top-[15%] left-[90%] rounded-xl ">
+                <Image src={logo2} alt="" />
+              </div>
+
+              <div className="  absolute w-40 top-[30%] left-[85%] shadow-red-500 shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all ">
+                <Image src={p3} alt="" />
+              </div>
+
+              <div className=" absolute w-20  top-[35%] left-[80%]  rounded-xl ">
+                <Image src={logo3} alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-[10%] bg-white w-4/12  text-black rounded-lg p-5">
             <h2 className="font-semibold">Currency</h2>
             <div className="flex gap-1 bg-slate-100 p-1 rounded-md">
               <Image alt="matic" src={"/matic.svg"} height={15} width={15} />
@@ -150,40 +214,19 @@ export default function Contribute() {
                 </button>
               </div>
             ) : (
-				<div className="w-full justify-end items-end">
-              <button
-                onClick={mintNFT}
-                className="p-2 bg-red-500  text-white font-semibold rounded-lg drop-shadow-[0px_0px_0px_rgb(0,0,0)] mt-4 hover:shadow-none shadow-[6px_6px_0px_rgb(0,0,0)]  hover:translate-y-0 -translate-y-1 hover:translate-x-0 -translate-x-1 transition-all "
-              >
-                Donate
-              </button>
-			  </div>
+              <div className="w-full justify-end items-end">
+                <button
+                  onClick={mintNFT}
+                  className="p-2 bg-red-500  text-white font-semibold rounded-lg drop-shadow-[0px_0px_0px_rgb(0,0,0)] mt-4 hover:shadow-none shadow-[6px_6px_0px_rgb(0,0,0)]  hover:translate-y-0 -translate-y-1 hover:translate-x-0 -translate-x-1 transition-all "
+                >
+                  Donate
+                </button>
+              </div>
             )}
           </div>
         </div>
-		<div className="footer p-5 bg-red-500 w-50 flex justify-between">
-          <div className="flex items-center space-x-4">
-          <Image src={logo}  alt="" className="w-20 " />
-            <div className="text-lg text-white font-semibold">Shelter</div>
-          </div>
-
-          <div className="text-white text-md flex space-x-6 justify-between items-center">
-            ©deflated pappadam
-          </div>
-          <div className="buttons flex space-x-5 justify-between items-center">
-            <button className="p-4 border rounded-[100%] border-grey-200">
-              face
-            </button>
-            <button className="p-4 border rounded-[100%] border-grey-200">
-              inst
-            </button>
-            <button className="p-4 border rounded-[100%] border-grey-200">
-              twit
-            </button>
-          </div>
-        </div>
       </div>
-	 
+      <Footer></Footer>
     </div>
   );
 }

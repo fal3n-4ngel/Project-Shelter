@@ -8,13 +8,15 @@ import logo from "../assets/logo.png";
 import logo1 from "../assets/logo.png";
 import logo2 from "../assets/logo.png";
 import logo3 from "../assets/logo.png";
-import p1 from  "../../public/nfts/65.png"
-import p2 from "../../public/nfts/83.png"
-import p3 from  "../../public/nfts/99.png"
+import p1 from "../../public/nfts/65.png";
+import p2 from "../../public/nfts/83.png";
+import p3 from "../../public/nfts/99.png";
 import Marquee from "react-fast-marquee";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useEffect, useRef } from "react";
+import 'font-awesome/css/font-awesome.min.css';
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,23 +26,28 @@ export default function Home() {
   const homeTextRef = useRef<any>(null);
   const aboutUsRef = useRef<any>(null);
   const objectivePageRef = useRef<any>(null);
-  const collectionPageRef=useRef<any>(null)
+  const collectionPageRef = useRef<any>(null);
 
   let ctx = gsap.context(() => {});
   let hometl = gsap.timeline(
     ScrollTrigger.create({
       trigger: "#home",
-      onEnter: () => {hometl.restart()},
-      onLeave: () => {hometl.revert()},
-      onEnterBack: () => {hometl.restart()},
-      onLeaveBack: () => {hometl.revert()}
+      onEnter: () => {
+        hometl.restart();
+      },
+      onLeave: () => {
+        hometl.revert();
+      },
+      onEnterBack: () => {
+        hometl.restart();
+      },
+      onLeaveBack: () => {
+        hometl.revert();
+      },
     })
   );
 
-  
-
   const homeLoad = () => {
-    ctx.revert();
     hometl.set(gsap.utils.toArray(homeTextRef.current.children), {
       transformOrigin: "left",
       opacity: 0,
@@ -51,19 +58,24 @@ export default function Home() {
       opacity: 1,
       scale: 1,
       duration: 1,
-      stagger: .2,
+      stagger: 0.2,
       ease: "power2.easeIn",
     });
-    hometl.to(homeDogRef.current, {
-      opacity: 1,
-      scale: 1,
-      duration: 1,
-      ease: "power3.easeInOut",
-    },"-=.5");
+    hometl.to(
+      homeDogRef.current,
+      {
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        ease: "power3.easeInOut",
+      },
+      "-=.5"
+    );
   };
 
   useEffect(() => {
     ctx.add(() => {
+      ScrollTrigger.refresh()
       homeLoad();
     });
     return () => {
@@ -80,16 +92,15 @@ export default function Home() {
         <div className="flex  flex-row items-center justify-between ">
           <div className="flex flex-row items-center justify-start">
             <div className="w-20">
-            <Image src={logo}  alt="" className=" " />
-              
+              <Image src={logo} alt="" className=" " />
             </div>
             <div className="text-lg text-black font-semibold">Shelter</div>
           </div>
           <div>
-            <ul className="flex flex-row justify-between space-x-4 ">
-              <li >
+            <ul className="flex flex-row justify-between space-x-4   ">
+              <li>
                 <a
-                  className="text-black disabled:text-slate-100"
+                  className="text-black disabled:text-slate-100 cursor-pointer  "
                   onClick={() => {
                     homeTextRef?.current?.scrollIntoView({
                       block: "end",
@@ -100,38 +111,42 @@ export default function Home() {
                   Home
                 </a>
               </li>
-              <li >
-                <a onClick={() => {
+              <li>
+                <a
+                  onClick={() => {
                     aboutUsRef?.current?.scrollIntoView({
                       block: "start",
                       behavior: "smooth",
                     });
                   }}
-                  className="text-black disabled:text-slate-100"
+                  className="text-black disabled:text-slate-100 cursor-pointer "
                 >
                   About Us
                 </a>
               </li>
               <li>
-                <a onClick={() => {
+                <a
+                  onClick={() => {
                     objectivePageRef?.current?.scrollIntoView({
                       block: "start",
                       behavior: "smooth",
                     });
                   }}
-                  className="text-black disabled:text-slate-100">
+                  className="text-black disabled:text-slate-100 cursor-pointer "
+                >
                   Meet
                 </a>
               </li>
 
               <li>
-                <a onClick={() => {
+                <a
+                  onClick={() => {
                     collectionPageRef?.current?.scrollIntoView({
                       block: "start",
                       behavior: "smooth",
                     });
                   }}
-                  className="text-black disabled:text-slate-100"
+                  className="text-black disabled:text-slate-100 cursor-pointer "
                 >
                   Collection
                 </a>
@@ -140,12 +155,14 @@ export default function Home() {
           </div>
 
           <div className="flex flex-row justify-between items-center space-x-4">
-            <PopButton
-              text="Contribute"
-              bgcolor="bg-red-500"
-              textColor="text-white"
-              shadow="rgb(0,0,0)"
-            />
+            <a href="./contribute">
+              <PopButton
+                text="Contribute"
+                bgcolor="bg-red-500"
+                textColor="text-white"
+                shadow="rgb(0,0,0)"
+              />
+            </a>
           </div>
         </div>
       </nav>
@@ -159,16 +176,16 @@ export default function Home() {
             className="max-w-[60%] flex flex-col  justify-center"
             ref={homeTextRef}
           >
-            <h1 className="flex mb-5 text-7xl font-bold">
+            <h1 className="flex mb-5 text-7xl font-bold opacity-0">
               Rhon put some catchphrase here
             </h1>
-            <p className="text-lg m-4 text-gray-600">
+            <p className="text-lg m-4 text-gray-600 opacity-0">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Sapiente, consequuntur pariatur ut quisquam, recusandae cupiditate
               consectetur molestias quia atque veritatis impedit qui hic
               explicabo ex debitis porro sint. Repellendus, quibusdam?
             </p>
-            <div className="mt-4">
+            <div className="mt-4 opacity-0">
               <PopButton
                 text="Explore Now"
                 bgcolor="bg-red-500"
@@ -179,7 +196,7 @@ export default function Home() {
           </div>
 
           <div
-            className="w-[70%] item-center flex justify-end"
+            className="w-[70%] item-center flex justify-end  opacity-0"
             ref={homeDogRef}
           >
             <div className="  bg-white flex flex-col border-2 border-black m-10  shadow-red-500 w-9/13  rounded-2xl shadow-[10px_10px_0px_rgb(0,0,0)]  translate-x-[-15px]  translate-y-[-15px] transition-all">
@@ -205,35 +222,32 @@ export default function Home() {
         >
           <div>
             <div className="w-11/12 flex flex-row ">
-              
-                <div className=" relative w-full">
-
-                  <div className=" absolute w-40  top-[200px] left-20 shadow-red-500   shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all  ">
-                    <Image src={p1} alt="" />
-                  </div>
-
-                  <div className=" absolute w-20  top-[50px] left-[120px]  rounded-xl ">
-                    <Image src={logo1} alt="" />
-                  </div>
-                  
-                  <div className="  absolute w-40  top-[20px] left-[250px] shadow-red-500  shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all">
-                  <Image src={p2} alt="" />
-                  </div>
-                  
-                  <div className=" absolute w-20  top-[50px] left-[450px]  rounded-xl ">
-                    <Image src={logo2} alt="" />
-                  </div>
-
-                  <div className="  absolute w-40 top-[200px] left-[420px] shadow-red-500 shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all ">
-                  <Image src={p3} alt="" />
-                  </div>
-
-                  <div className=" absolute w-20  top-[250px] left-[290px]  rounded-xl ">
-                    <Image src={logo3} alt="" />
-                  </div>
-                  
+              <div className=" relative w-full">
+                <div className=" absolute w-40  top-[200px] left-20 shadow-red-500   shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all  ">
+                  <Image src={p1} alt="" />
                 </div>
-             
+
+                <div className=" absolute w-20  top-[50px] left-[120px]  rounded-xl ">
+                  <Image src={logo1} alt="" />
+                </div>
+
+                <div className="  absolute w-40  top-[20px] left-[250px] shadow-red-500  shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all">
+                  <Image src={p2} alt="" />
+                </div>
+
+                <div className=" absolute w-20  top-[50px] left-[450px]  rounded-xl ">
+                  <Image src={logo2} alt="" />
+                </div>
+
+                <div className="  absolute w-40 top-[200px] left-[420px] shadow-red-500 shadow-[8px_8px_0px_rgb(0,0,0)] translate-y-1 translate-x-1 transition-all ">
+                  <Image src={p3} alt="" />
+                </div>
+
+                <div className=" absolute w-20  top-[250px] left-[290px]  rounded-xl ">
+                  <Image src={logo3} alt="" />
+                </div>
+              </div>
+
               <div className="w-full m-10 flex flex-col justify-center">
                 <h1 className="mb-10 text-6xl font-bold text-black">
                   About us
@@ -347,37 +361,17 @@ export default function Home() {
             Fancy word for collection
           </h1>
           <div className=" flex justify-evenly m-auto w-[80rem] h-70vh flex-wrap">
-            <PetBox name="Twinkle Toes" img="/nfts/4.png" rarity="#4"/>
-            <PetBox name="Lady Fluffington" img="/nfts/26.png" rarity="#26"/>
-            <PetBox name="Captain Kidd" img="/nfts/43.png" rarity="#43"/>
-            <PetBox name="Frankie Furrball" img="/nfts/45.png" rarity="#45"/>
-            <PetBox name="Baahdass" img="/nfts/83.png" rarity="#83"/>
-           
+            <PetBox name="Twinkle Toes" img="/nfts/4.png" rarity="#4" />
+            <PetBox name="Lady Fluffington" img="/nfts/26.png" rarity="#26" />
+            <PetBox name="Captain Kidd" img="/nfts/43.png" rarity="#43" />
+            <PetBox name="Frankie Furrball" img="/nfts/45.png" rarity="#45" />
+            <PetBox name="Baahdass" img="/nfts/83.png" rarity="#83" />
+
             <Knowmore />
           </div>
         </div>
 
-        <div className="footer p-5 bg-red-500 w-50 flex justify-between">
-          <div className="flex items-center space-x-4">
-          <Image src={logo}  alt="" className="w-20 " />
-            <div className="text-lg text-white font-semibold">Shelter</div>
-          </div>
-
-          <div className="text-white text-md flex space-x-6 justify-between items-center">
-            ©deflated pappadam
-          </div>
-          <div className="buttons flex space-x-5 justify-between items-center">
-            <button className="p-4 border rounded-[100%] border-grey-200">
-              face
-            </button>
-            <button className="p-4 border rounded-[100%] border-grey-200">
-              inst
-            </button>
-            <button className="p-4 border rounded-[100%] border-grey-200">
-              twit
-            </button>
-          </div>
-        </div>
+        <Footer></Footer>
       </div>
     </main>
   );

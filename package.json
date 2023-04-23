@@ -17,6 +17,7 @@
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "ethers": "^5.7.2",
+    "font-awesome": "^4.7.0",
     "gsap": "^3.11.5",
     "next": "^13.3.0",
     "postcss": "8.4.22",
